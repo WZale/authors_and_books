@@ -1,0 +1,8 @@
+<h1>Authors</h1>
+<% @authors.each do |author| %>
+  <h3><%= author.first_name + " " + author.last_name %></h3>
+  <p>Dead white guy: <%= author.dead_white_guy %></p>
+  <p>Year of birth: <%= author.year_of_birth %></p>
+  <p>Country of origin: <%= author.country_of_origin %></p>
+
+<% end %>
