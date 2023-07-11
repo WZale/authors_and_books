@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "the book's show page" do
+RSpec.describe "the book's show page", type: :feature do
   before do
     @author = Author.create!(first_name: "David", last_name: "Foster Wallace", dead_white_guy: true, year_of_birth: 1962, country_of_origin: "United States")
     @author_2 = Author.create!(first_name: "Malcom", last_name: "X", dead_white_guy: false, year_of_birth: 1925, country_of_origin: "United States")
