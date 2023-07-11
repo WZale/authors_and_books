@@ -30,6 +30,7 @@ RSpec.describe "the author's show page" do
       
       expect(page).to have_content(@author.first_name)
       expect(page).to_not have_content(@author_2.first_name)
+      save_and_open_page
     end
   end
 end
