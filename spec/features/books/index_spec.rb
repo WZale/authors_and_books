@@ -13,15 +13,15 @@ RSpec.describe "the book's show page", type: :feature do
     @book_4 = @author_4.books.create!(author_id: 4, title: "The Water Dancer", worth_reading: true, year_published: 2019)
     @book_5 = @author_4.books.create!(author_id: 4, title: "Between the World and Me", worth_reading: true, year_published: 2015)
   end
-
-  describe "#show" do
-    it "displays an individual book when book/:id is visited" do
-      visit "/books/#{@book.id}"
-
+  
+  describe "#index" do
+    it "displays the index of books when /books is visited" do
+      visit "/books"
+  
       expect(page).to have_content(@book.title)
-      expect(page).to_not have_content(@book_2.title)
+      expect(page).to_not have_content(@author.first_name)
       save_and_open_page
     end
   end
-  
+
 end
